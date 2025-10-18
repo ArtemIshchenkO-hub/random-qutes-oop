@@ -27,10 +27,14 @@ class RandomQuotesApp {
     this.changeCurrentCuote(RandomQuote.getRandomQuote())
   }
 
-  getRandomQuoteViaAPI() {
-    RandomQuote.getRandomQuoteViaAPI().then((quote) => {
-      this.changeCurrentCuote(quote)
-    })
+  // getRandomQuoteViaAPI() {
+  //   RandomQuote.getRandomQuoteViaAPI().then((quote) => {
+  //     this.changeCurrentCuote(quote)
+  //   })
+  // }
+
+  async getRandomQuoteViaAPI() {
+    this.changeCurrentCuote(await RandomQuote.getRandomQuoteViaAPI())
   }
 
   init() {
