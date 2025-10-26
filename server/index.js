@@ -12,7 +12,11 @@ function getRandomQuote() {
 }
 
 const corsOptions = {
-  origin: ['http://127.0.0.1:8080', 'http://localhost:8080'],
+  origin: [
+    'http://127.0.0.1:8080',
+    'http://localhost:8080',
+    'https://random-qutes-oop-frontend.onrender.com',
+  ],
 }
 
 app.use(cors(corsOptions))
