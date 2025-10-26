@@ -23,7 +23,7 @@ class RandomQuote {
   }
 
   static async getRandomQuoteViaOwnAPI() {
-    const url = 'http://localhost:3000/quotes/random-quote'
+    const url = 'https://random-qutes-oop.onrender.com/quotes/random-quote'
     const options = { headers: { 'Content-Type': 'aplication/json' } }
 
     try {
