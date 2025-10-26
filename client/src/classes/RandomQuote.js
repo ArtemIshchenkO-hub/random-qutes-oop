@@ -22,6 +22,20 @@ class RandomQuote {
     }
   }
 
+  static async getRandomQuoteViaOwnAPI() {
+    const url = 'http://localhost:3000/quotes/random-quote'
+    const options = { headers: { 'Content-Type': 'aplication/json' } }
+
+    try {
+      const response = await fetch(url, options)
+      const quote = await response.json()
+      const { id, text, author } = quote
+      return new Quote(id, text, author)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+
   //   static getRandomQuoteViaAPI() {
   //     const url = 'https://quoteslate.vercel.app/api/quotes/random'
   //     const options = { headers: { 'Content-Type': 'aplication/json' } }
